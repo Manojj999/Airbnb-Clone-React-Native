@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text, ImageBackground, Pressable} from 'react-native';
 import styles from './styles';
 //import Fontisto from 'react-native-vrector-icons/Fontisto';
-import Fontisto from 'react-native-vector-icons/Fontisto'
+import Fontisto from 'react-native-vector-icons/Fontisto';
 const HomeScreen = () => {
   return (
     <View>
