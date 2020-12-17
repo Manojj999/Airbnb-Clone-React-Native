@@ -7,19 +7,15 @@
  */
 
 import React from 'react';
-import {SafeAreaView, StyleSheet, StatusBar} from 'react-native';
+import {SafeAreaView, StyleSheet, StatusBar, ScrollView} from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-
-
-import HomeScreen from './src/screens/Home';
+//import HomeScreen from './src/screens/Home';
 import Post from './src/components/Post';
+import feed from './assets/data/feed';
+
+const post1 = feed[0];
+const post2 = feed[1];
+const post3 = feed[2];
 
 const App: () => React$Node = () => {
   return (
@@ -27,12 +23,14 @@ const App: () => React$Node = () => {
       <StatusBar barStyle="dark-content" />
       <SafeAreaView>
         {/* <HomeScreen /> */}
-        <Post />
+        <ScrollView>
+          <Post post={post1} />
+          <Post post={post2} />
+          <Post post={post3} />
+        </ScrollView>
       </SafeAreaView>
     </>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default App;
