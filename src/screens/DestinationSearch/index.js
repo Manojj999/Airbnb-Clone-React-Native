@@ -5,7 +5,7 @@ import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
 import SuggetionRow from './SuggetionRow';
 import {GooglePlacesAutocomplete} from 'react-native-google-places-autocomplete';
-
+const PLACE_API_KEY = "AIzaSyDa-_B3CLlOHWG33nQMeuMjLu0pO3PdHzo";
 const DestinationSearch = (props) => {
   const navigation = useNavigation();
 
@@ -15,7 +15,7 @@ const DestinationSearch = (props) => {
         placeholder="Where are you going?"
         onPress={(data, details = null) => {
           // 'details' is provided when fetchDetails = true
-          console.log(data, details);
+          // console.log(data, details);
           navigation.navigate('Guests');
         }}
         fetchDetails
@@ -23,7 +23,8 @@ const DestinationSearch = (props) => {
           textInput: styles.textInput,
         }}
         query={{
-          key: 'AIzaSyCuyNNQbJcq2x9nH6xNVORus9fUp69OKJo',
+          // key: 'AIzaSyCuyNNQbJcq2x9nH6xNVORus9fUp69OKJo',
+          key: PLACE_API_KEY,
           language: 'en',
           types: '(cities)',
         }}
